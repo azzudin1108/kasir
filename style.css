@@ -1,0 +1,35 @@
+:root {
+    --blue: #0853b4;
+    --red: rgb(170, 9, 9);
+    --font: 'Nova Square', sans-serif;
+}
+
+* {
+    font-family: var(--font);
+}
+
+.primary {
+    background-color: var(--red) !important;
+}
+
+.red {
+    background-color: var(--red) !important;
+}
+
+.text-red {
+    color: var(--red) !important;
+}
+
+.border-red {
+    border-color: var(--red) !important;
+}
+
+.full-screen {
+    height: 100vh;
+    width: 100%;
+    overflow: scroll;
+}
+
+#scroll {
+    height: 200px;
+}

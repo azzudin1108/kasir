@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Indoapril</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- style -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+</head>
+
+<body class="bg-secondary">
+
+    <div class="container-fluid text-white position-fixed">
+        <div class="row justify-content-between border-bottom border-4 border-red text-center p-2 bg-black" id="">
+            <div class="col-md-6 col-3 d-flex align-items-center text-start">
+                <h1 class="text-light fw-bold"><span class="text-red">Indo</span>april</h1>
+            </div>
+            <div class="col-md-2 col-3 text-end border-end border-1 border-light">
+                <h5 class="fw-semibold">Tanggal :</h5>
+                <p id="date"></p>
+            </div>
+            <div class="col-md-2 col-3 text-end border-end border-1 border-light">
+                <h5 class="fw-semibold">Jam :</h5>
+                <p id="time"></p>
+            </div>
+            <div class="col-md-2 col-3 text-end border-end border-1 border-light">
+                <h5>Kasir :</h5>
+                <p>Azis Amirudin</p>
+            </div>
+        </div>
+        <div class="row text-dark justify-content-between">
+            <div class="col-md-4 bg-white p-2 border border-3 border-secondary" id="inputBarang">
+                <div class="judul">
+                    <h5 class="text-dark text-start fw-bold"><i class="bi bi-cart-plus-fill"></i> Input Barang</h5>
+                </div>
+                <div class="barang text-start h-100">
+                    <div class="row justify-content-between" id="buku">
+                        <div class="col-md-7 col-sm-9 col-7">
+                            <p class="fw-semibold">Buku</p>
+                        </div>
+                        <div class="col-md-5 col-sm-3 col-5 d-flex tombol">
+                            <button class="btn btn-sm fw-bold red text-light mx-1 h-75">+</button>
+                            <button class="btn btn-sm fw-bold red text-light mx-1 h-75">-</button>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between" id="pensil">
+                        <div class="col-md-7 col-sm-9 col-7">
+                            <p class="fw-semibold">Pensil</p>
+                        </div>
+                        <div class="col-md-5 col-sm-3 col-5 d-flex tombol">
+                            <button class="btn btn-sm fw-bold red text-light mx-1 h-75">+</button>
+                            <button class="btn btn-sm fw-bold red text-light mx-1 h-75">-</button>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between" id="penghapus">
+                        <div class="col-md-7 col-sm-9 col-7">
+                            <p class="fw-semibold">Penghapus</p>
+                        </div>
+                        <div class="col-md-5 col-sm-3 col-5 d-flex tombol">
+                            <button class="btn btn-sm fw-bold red text-light mx-1 h-75">+</button>
+                            <button class="btn btn-sm fw-bold red text-light mx-1 h-75">-</button>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between" id="bolpoint">
+                        <div class="col-md-7 col-sm-9 col-7">
+                            <p class="fw-semibold">Bolpoint</p>
+                        </div>
+                        <div class="col-md-5 col-sm-3 col-5 d-flex tombol">
+                            <button class="btn btn-sm fw-bold red text-light mx-1 h-75">+</button>
+                            <button class="btn btn-sm fw-bold red text-light mx-1 h-75">-</button>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between" id="penggaris">
+                        <div class="col-md-7 col-sm-9 col-7">
+                            <p class="fw-semibold">Penggaris</p>
+                        </div>
+                        <div class="col-md-5 col-sm-3 col-5 d-flex tombol">
+                            <button class="btn btn-sm fw-bold red text-light mx-1 h-75">+</button>
+                            <button class="btn btn-sm fw-bold red text-light mx-1 h-75">-</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 border border-3 border-secondary">
+                <div class="row flex-column align-items-end">
+                    <div class="col bg-white p-1 border-bottom border-1 border-secondary">
+                        <h5 class="fw-semibold"><i class="bi bi-cash-coin"></i> Total</h5>
+                        <p class="fw-bold">Rp. <span id="total">0</span>.00,-</p>
+                    </div>
+                    <div class="col bg-white p-1 border-bottom border-1 border-secondary">
+                        <h5 class="fw-semibold"><i class="bi bi-wallet"></i></i> Cash</h5>
+                        <p class="fw-bold d-inline-block">Rp. <input type="number" id="cash"></p>
+                        <button type="submit" class="btn btn-success" id="cashAcc">Ok</button>
+                    </div>
+                    <div class="col bg-white p-1">
+                        <h5 class="fw-semibold"><i class="bi bi-coin"></i></i> Cashback</h5>
+                        <p class="fw-bold">Rp. <span id="cashback">0</span>.00,-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 bg-white border border-3 border-secondary">
+                <div class="judul">
+                    <h5 class="fw-bold"><i class="bi bi-card-checklist"></i> Daftar Barang</h5>
+                </div>
+                <div class="row text-start justify-content-center overflow-y-auto" id="scroll">
+                    <div class="col-5 text-uppercase" id="selection">
+                        <p class="fw-semibold text-white border-bottom px-2 border-1 border-dark primary">Nama
+                            Barang
+                        </p>
+                    </div>
+                    <div class="col-2 border-start border-1 border-dark" id="qty">
+                        <p class="fw-semibold text-white px-2 border-bottom border-1 border-dark primary">Qty
+                        </p>
+                    </div>
+                    <div class="col-5 border-start border-1 border-dark" id="price">
+                        <p class="fw-semibold text-white px-2 border-bottom border-1 border-dark primary">Harga Barang
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
